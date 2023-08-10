@@ -1,0 +1,11 @@
+/* Sides.css */
+.image-container {
+  width: 600px;
+  height: 550px;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: 100%;
+  }
+  
