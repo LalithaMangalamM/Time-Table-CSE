@@ -1,7 +1,17 @@
-let mongoose = require("mongoose")
-let uslogin = new mongoose.Schema({
-    email:{type:String},
-    password:{type:String}
+let mongoose  =  require("mongoose");
+
+let userSchema = mongoose.Schema(
+    {
+    name : {
+        type: String,
+         required:true
+        },
+    email : {type: String,
+        required:true
+    },
+    password : {type: String},
+    
 })
-const Login = mongoose.model('login', uslogin)
-module.exports=Login
+
+module.exports = mongoose.model("faculty", userSchema);
+

@@ -121,7 +121,7 @@ let Signup = () => {
                             <form onSubmit={handleSubmit}>
                                 <input  className = "input1" type="text" placeholder="email " onChange={handleEmail} ></input><br />
                                 <input className = "input1" type="password" placeholder="password" onChange={handlePassword}></input><br />
-                                <button className="signup-button" type="submit" onClick={() => navigate("/admin/dashboard")}>LOGIN</button>
+                                <button className="signup-button" type="submit" >LOGIN</button>
                             </form>
                         </div>
                     </div>

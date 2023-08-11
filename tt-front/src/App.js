@@ -27,9 +27,9 @@ function App() {
 
   return (
     <div>
-      {/* <Navigate /> */}
-      <Form addStaff={addStaff} />
-      <Display dataList = {staffs} />
+      <Navigate />
+      {/* <Form addStaff={addStaff} />
+      <Display dataList = {staffs} /> */}
     </div>
   )
   }
