@@ -9,7 +9,18 @@ let userSchema = mongoose.Schema(
     email : {type: String,
         required:true
     },
-    password : {type: String},
+    password : {
+        type: String
+    },
+    role:{
+        type: String
+    },
+    classes: [
+        {
+            class: String, 
+            subjects: [String] 
+        }
+    ]
     
 })
 
