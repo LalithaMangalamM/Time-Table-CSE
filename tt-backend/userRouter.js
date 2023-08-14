@@ -61,8 +61,8 @@ router.post("/insert",  async (request, response) => {
         const transporter = nodemailer.createTransport({
           service: 'Gmail', // e.g., 'Gmail', 'Outlook'
           auth: {
-            user: 'tablefit.2023@gmail.com',
-            pass: 'mnoskauelkkddcgg',
+            user: process.env.USER,
+            pass: process.env.PASS,
           },
         });
     
