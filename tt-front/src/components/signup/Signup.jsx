@@ -7,9 +7,13 @@ import side from "../asstes/login.png"
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./signup.css"
+import warn from "../elements/warn";
+import Form from "../elements/Form";
 
 
 let Signup = () => {
+
+  
     //navigate hook
     const navigate = useNavigate();
 
@@ -38,26 +42,12 @@ let Signup = () => {
     {
         e.preventDefault();
         if (email === '' || password === '') {
-            toast.warn('Enter all fields 😕', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-            });
+            warn("Enter all fields 😕");
         }
         else
         {
             if (!isValid) {
-                toast.warn('Incorrect Email ID😕', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                });
+                warn('Incorrect Email ID😕');
             }
             else 
             {
@@ -76,31 +66,20 @@ let Signup = () => {
                         // if(data.role === 'admin')
                         navigate('/admin/dashboard');
                     } else {
-                        toast.warn('Invalid login credentials!', {
-                            position: "top-center",
-                            autoClose: 5000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                        });
+                        warn("Invalid Login Credentials!");
                     }
 
                 } 
                 catch (error) {
-                    toast.warn(error, {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                    });
-
+                    warn(error);
                 }
             }
         }
     }
+    const fields = [
+        { type:"text", placeholder:"email ",  onChange:handleEmail },
+        { type:"password", placeholder:"password",  onChange:handlePassword }
+    ];
     return (
         <div className="signup">
             <div>
@@ -118,11 +97,7 @@ let Signup = () => {
                             <img src={login} alt="login" />
                         </div>
                         <div className="form">
-                            <form onSubmit={handleSubmit}>
-                                <input  className = "input1" type="text" placeholder="email " onChange={handleEmail} ></input><br />
-                                <input className = "input1" type="password" placeholder="password" onChange={handlePassword}></input><br />
-                                <button className="signup-button" type="submit" >LOGIN</button>
-                            </form>
+                        <Form fields={fields} onSubmit={handleSubmit} txt="LOGIN"/>
                         </div>
                     </div>
 

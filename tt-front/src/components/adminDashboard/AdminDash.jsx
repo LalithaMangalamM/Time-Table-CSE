@@ -4,8 +4,15 @@ import adminDash from "../asstes/admin-dash.png";
 import Sides from "../elements/Sides";
 import send from "../asstes/send 1.png"
 import "./adminDash.css";
+import Input from "../elements/input/Input";
+import { useNavigate } from "react-router-dom";
 
 const AdminDash = () => {
+
+// const navigate = useNavigate()
+    // const handleAddDetails =() =>{
+    //     navigate()
+    // }
     return (
         <div className="addash">
             <div>
@@ -20,34 +27,14 @@ const AdminDash = () => {
                 <div className="addash-right">
                 <div className="addash-wrapper">
                 <div className="1">
-                    <p>Here, you will create a new time table for Individual Classes.</p>
-                    <div className="tabs">
-                    <div>
-                    <img src={send} />
-                    </div>
-                    <div>
-                    <button className="button">Create Table</button></div>
-                    </div>
+                <Input text = "Here, you will create a new time table for Individual Classes."  bt = "Create Table" />
                 </div>
                 <div className="2">
-                    <p>Here, you can view a time table for Individual Staffs.</p>
-                    <div className="tabs">
-                    <div>
-                    <img src={send} />
-                    </div>
-                    <div>
-                    <button className="button">View Table</button></div>
-                    </div>
+                <Input text = "Here, you can view a time table for Individual Staffs."  bt = "View Table" />
                 </div>
                 <div className="3">
-                    <p>Here, you can able to add the subject details fo individual staffs.</p>
-                    <div className="tabs">
-                    <div>
-                    <img src={send} />
-                    </div>
-                    <div>
-                    <button className="button">Add Details</button></div>
-                    </div>
+                <Input text = "Here, you can able to add the subject details for individual staffs."  bt = "Add Details" />
+
                 </div>
 
                 </div>

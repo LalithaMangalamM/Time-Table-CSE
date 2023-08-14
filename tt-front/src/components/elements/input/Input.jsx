@@ -1,21 +1,20 @@
-import "./input.css";
-import send from  "../../asstes/send 1.png"
+import send from "../../asstes/send 1.png"
 
 const Input = (props) => {
-    let { text, bt } = props;
+    let { text, bt , onClick} = props;
     return (
-           <div className="dash">
-             <div className="dashboard">
-                <div className="text">
-                    <p>{text}</p>
+        <div className="dash">
+            <p>{text}</p>
+            <div className="tabs">
+                <div>
+                    <img src={send} />
                 </div>
-                <div className="arrow">
-                    <img className="arrimg" src={send} alt="arrow" />
-                    <button className="btn" type="button">{bt}</button>
+                <div>
+                    <button className="button" onClick={onClick}>{bt}</button>
                 </div>
             </div>
-      
-           </div>
+
+        </div>
     )
 }
 

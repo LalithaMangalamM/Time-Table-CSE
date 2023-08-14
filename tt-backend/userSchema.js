@@ -20,6 +20,13 @@ let userSchema = mongoose.Schema(
             class: String, 
             subjects: [String] 
         }
+    ],
+    timetable: [
+        {
+            day: String,
+            hour: Number,
+            subject: String
+        }
     ]
     
 })

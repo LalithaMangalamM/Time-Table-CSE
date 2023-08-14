@@ -1,61 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inder&family=Libre+Baskerville&display=swap");
 
-
-.addash{
-    display: flex;
+.staffdash {
+  display: flex;
   flex-direction: column;
   width: 90vw;
   flex-wrap: wrap;
   gap: 40px;
 }
-
-.addash-container{
-    display: flex;
-    align-self: center;
-    gap: 60px;
-    /* align-items: center; */
-    flex-wrap: wrap;
+.staffdash-container {
+  display: flex;
+  align-self: center;
+  gap: 60px;
+  /* align-items: center; */
+  flex-wrap: wrap;
 }
-
-.addash-wrapper{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Inder', 'sans-serif';
+.staffdash-wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inder", "sans-serif";
   font-size: 24px;
   /* text-align:center ; */
   color: #ffff;
   width: 100%;
   height: 100%;
 }
-.addash-wrapper p{
-    width: 350px;
+.staffdash-wrapper p {
+  width: 350px;
 }
-.addash-wrapper img{
-    width: 200px;
-    margin-left: 130px;
-    margin-top:-30px;
-    /* height: 300px; */
+.staffdash-wrapper img {
+  width: 200px;
+  margin-left: 130px;
+  margin-top: -30px;
+  /* height: 300px; */
 }
-.button{
-    background: white;
-    font-family: 'Inder', 'sans-serif';
-    color: black;
-    font-size: 25px;
-  font-weight: 200;
-  text-align: center;
-    width: 300px;
-    height: 60px;
-    border-radius: 50px;
+.tabs {
+  display: flex;
+  gap: 20px;
 }
-
-
-
-.tabs{
-    display: flex;
-    gap: 20px;
+.staffdash-right {
+  margin-top: 50px;
 }
-
-.addash-right{
-    margin-top: -90px;
-}
-
