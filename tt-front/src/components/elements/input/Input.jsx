@@ -1,16 +1,15 @@
 import send from "../../asstes/send 1.png"
 
 const Input = (props) => {
-    let { text, bt , onClick} = props;
     return (
         <div className="dash">
-            <p>{text}</p>
+            <p>{props.text}</p>
             <div className="tabs">
                 <div>
                     <img src={send} />
                 </div>
                 <div>
-                    <button className="button" onClick={onClick}>{bt}</button>
+                    <button className="button" onClick={props.onClick}>{props.bt}</button>
                 </div>
             </div>
 

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import login from "../asstes/loginimg.png"
 import side from "../asstes/login.png"
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./signup.css"
 import warn from "../elements/warn";
@@ -61,11 +61,19 @@ let Signup = () => {
                         body: JSON.stringify({ email: email, password: password }),
                     });
                     if (response.ok) {
-                        // const data = await response.json();
-                        // setName(data.name)
-                        // if(data.role === 'admin')
+                        const data = await response.json();
+                        // Store the token in local storage
+                        localStorage.setItem('token', data.token);
+                        console.log(data.token);
+                        if(data.role === 'admin'){
                         navigate('/admin/dashboard');
-                    } else {
+                        }
+                        else if(data.role === 'staff')
+                        {
+                            navigate("/staff/profile");
+                        }
+                    } 
+                    else {
                         warn("Invalid Login Credentials!");
                     }
 

@@ -9,10 +9,10 @@ import { useNavigate } from "react-router-dom";
 
 const AdminDash = () => {
 
-// const navigate = useNavigate()
-    // const handleAddDetails =() =>{
-    //     navigate()
-    // }
+const navigate = useNavigate()
+    const handleAddDetails =() =>{
+        navigate("/admin/add")
+    }
     return (
         <div className="addash">
             <div>
@@ -33,7 +33,7 @@ const AdminDash = () => {
                 <Input text = "Here, you can view a time table for Individual Staffs."  bt = "View Table" />
                 </div>
                 <div className="3">
-                <Input text = "Here, you can able to add the subject details for individual staffs."  bt = "Add Details" />
+                <Input text = "Here, you can able to add the subject details for individual staffs."  bt = "Add Details" onClick= {handleAddDetails} />
 
                 </div>
 

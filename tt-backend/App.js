@@ -4,7 +4,7 @@ let cors = require("cors")
 require("dotenv").config();
 require("./db");
 let app =  express()
-let router = require("./userRouter.js");
+let router = require("./routes/userRouter");
 const bodyParser = require("body-parser");
 const PORT = 5000
 

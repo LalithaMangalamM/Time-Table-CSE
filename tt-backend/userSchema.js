@@ -1,24 +1,15 @@
-let mongoose  =  require("mongoose");
+const mongoose = require("mongoose");
 
-let userSchema = mongoose.Schema(
-    {
-    name : {
-        type: String,
-         required:true
-        },
-    email : {type: String,
-        required:true
-    },
-    password : {
-        type: String
-    },
-    role:{
-        type: String
-    },
+const userSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    department: String,
+    password: String,
+    role: String,
     classes: [
         {
-            class: String, 
-            subjects: [String] 
+            class: String,
+            subjects: [String]
         }
     ],
     timetable: [
@@ -27,9 +18,10 @@ let userSchema = mongoose.Schema(
             hour: Number,
             subject: String
         }
-    ]
-    
-})
+    ],
+    profilePicture: String
+});
 
-module.exports = mongoose.model("faculty", userSchema);
+const Faculty = mongoose.model("Faculty", userSchema);
 
+module.exports = Faculty;

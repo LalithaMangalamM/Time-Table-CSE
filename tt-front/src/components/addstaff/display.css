@@ -1,9 +1,115 @@
-/* .list{
-    background-color: #BEBEBE;
-   margin:30px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Caveat:wght@600&family=Inder&family=Libre+Baskerville&display=swap");
 
-.tableList{
-    width: 100%;
-    border-collapse: collapse;
-} */
+.display {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    flex-wrap: wrap;
+    gap: 2.5em;
+  }
+
+  .displayleft {
+    display: flex;
+    justify-content: center;
+    margin-left: 6.25em;
+    margin-top: -1.25em;
+    align-items: flex-start;
+  }
+  
+  .faculty img{
+    width: 6.25;
+    height: 6.25;
+    margin-left: 0.625em;
+    margin-top: 0.625em;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    background: #bebebe;
+    width: auto;
+    flex-grow: 1;
+    border-radius: 3.125em;
+    padding: 2.5em;
+    gap: 0.625em;
+  }
+  
+  .faculty {
+    display:flex;
+    gap:3.125em;
+    background: #FFFF;
+    padding: 0.625em;
+    border-radius: 3.125em;
+  }
+  
+  .displayform {
+    background: #bebebe;
+    padding: 1.25em;
+    border-radius: 3.125em;
+  }
+  
+
+
+.displaycontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6.25em;
+    height: 34.375em; 
+  }
+  
+  .displayright {
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    height: 31.25em; 
+    overflow: hidden; 
+    flex-grow: 1;
+    height: 550px;
+
+  }
+  
+
+  .scrollable {
+    display: flex;
+    align-items: flex-start;
+    flex: 1; /* This will make the scrollable content take the remaining space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #bebebe;
+    border-radius: 30px;
+    gap: 0.625em;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f0f0f0; 
+  }
+  
+  .print{
+    font-family: "Inder", "sans-serif";
+    font-size: 1.5em;
+  }
+
+
+  /* Style the scrollbar thumb */
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+  }
+  
+  /* Style the scrollbar thumb on hover */
+  .scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the thumb on hover */
+  }
+  
+  /* Style the scrollbar track */
+  .scrollable::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Color of the track */
+  }
+  
+  /* Style the scrollbar track on hover */
+  .scrollable::-webkit-scrollbar-track:hover {
+    background-color: #ccc; /* Color of the track on hover */
+  }
+  
+  
+  
+  
+  
+  
+  
