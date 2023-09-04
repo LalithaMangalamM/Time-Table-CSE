@@ -4,7 +4,8 @@
 .addash{
     display: flex;
   flex-direction: column;
-  width: 90vw;
+  width: 98vw;
+  /* height: 90vh; */
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -47,15 +48,31 @@
     height: 60px;
     border-radius: 50px;
 }
+.header{
+    display: flex;
+    justify-content: space-between; /* Add this line */
+    align-items: center; /* Add this line */
+}
 
 
-
+.prof{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url("../asstes/staff.png");
+    background-size: cover;
+    background-position: center center;
+    align-self: flex-start;
+}
+.prof:hover{
+    cursor:pointer;
+}
 .tabs{
     display: flex;
     gap: 20px;
 }
 
 .addash-right{
-    margin-top: -90px;
+    margin-top: -80px;
 }
 

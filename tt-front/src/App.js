@@ -12,13 +12,13 @@ function App() {
 
   return (
     <div>
-      {/* <Navigate /> */}
+      <Navigate />
       {/* <Form addStaff={addStaff} />
       <Display dataList = {staffs} /> */}
       {/* <AdminDash /> */}
       {/* <StaffDash /> */}
       {/* <Display /> */}
-      <Profile />
+      {/* <Profile /> */}
     </div>
   )
   }
