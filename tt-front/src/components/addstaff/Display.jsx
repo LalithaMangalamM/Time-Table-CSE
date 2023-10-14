@@ -12,8 +12,8 @@ const Display = () => {
   const [data, setData] = useState([]);
   const [name, setName] = useState("");
   const [department, setDepartment] = useState("")
+  const [role,setRole] = useState("")
   const [email, setEmail] = useState("")
-  const [year, setYear] = useState("")
   const [cls, setCls] = useState("")
   const [subject, setSubject] = useState("")
 
@@ -29,13 +29,13 @@ const Display = () => {
   const displayHandleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log({ name, department, year, email, cls, subject });
+      console.log({ name, department, role, email, cls, subject });
       const response = await fetch("http://localhost:5000/insert", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, department, year, email, cls, subject })
+        body: JSON.stringify({ name, department,role, email, cls, subject })
 
       })
       const newData = await response.json();
@@ -45,8 +45,8 @@ const Display = () => {
       // Clear the form fields after successful submission
       setName("");
       setDepartment("");
+      setRole("");
       setEmail("");
-      setYear("");
       setCls("");
       setSubject("");
 
@@ -61,11 +61,11 @@ const Display = () => {
   const handleDepartment = (e) => {
     setDepartment(e.target.value);
   }
+  const handleRole = (e) =>{
+    setRole(e.target.value);
+  }
   const handleEmail = (e) => {
     setEmail(e.target.value);
-  }
-  const handleYear = (e) => {
-    setYear(e.target.value);
   }
   const handleCls = (e) => {
     setCls(e.target.value);
@@ -77,8 +77,8 @@ const Display = () => {
   const addFields = [
     { type: "text", placeholder: "Name", onChange: handleName },
     { type: "text", placeholder: "Department", onChange: handleDepartment },
+    {type:"text",placeholder:"Role",onChange:handleRole},
     { type: "text", placeholder: "Email", onChange: handleEmail },
-    { type: "text", placeholder: "Year", onChange: handleYear },
     { type: "text", placeholder: "Class", onChange: handleCls },
     { type: "text", placeholder: "Subject", onChange: handleSubject }
   ]
@@ -105,6 +105,7 @@ const Display = () => {
                     <div className='print'>
                       <p>Name: {faculty.name}</p>
                       <p>Department: {faculty.department}</p>
+                      <p>Role: {faculty.role}</p>
                     </div>
 
                   </li>

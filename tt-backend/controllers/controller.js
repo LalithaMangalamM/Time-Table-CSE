@@ -14,7 +14,7 @@ const getCall = (request, response) => {
 
   const list =  async(request,response) => {
     try {
-      const fields = ['name','department'];
+      const fields = ['name','department','role'];
       const data = await Faculty.find().select(fields)
       response.json(data);      
     } catch (error) {
@@ -109,8 +109,7 @@ const insert =  async (request, response) => {
             email: newFaculty.email,
             role: newFaculty.role,
             department: newFaculty.department,
-            year: newFaculty.year,
-            class: newFaculty.class,
+            class: newFaculty.classes,
           };
       
           response.json(userData);

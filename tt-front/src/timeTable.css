@@ -1,0 +1,29 @@
+.tableLogo{
+    display: flex;
+    gap: 40%;
+}
+.design{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    padding: 10px;
+}
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap:20%;
+}
+
+.staffWrapper{
+    display: flex;
+    gap: 3%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.sub{
+    padding: 10px;
+}

@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     timetable: [
         {
             day: String,
-            hour: Number,
+            hour: String,
             subject: String
         }
     ],

@@ -1,0 +1,45 @@
+.college-timetable {
+  display: flex;
+  /* width: 80vw; */
+  height: 55vh;
+  margin: 0 auto;
+}
+
+table {
+  /* width: 65vw; */
+  height: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  width: 1000px;
+}
+
+td {
+  background-color: #fff;
+  /* width: 1000px; */
+}
+th, td {
+  padding: 5px;
+  /* white-space: nowrap; */
+  /* white-space: nowrap; */
+/* overflow-x: auto; */
+}
+
+/* Responsive styles (adjust as needed) */
+@media (max-width: 768px) {
+  th, td {
+    font-size: 12px;
+  }
+  
+  /* Adjust cell padding for smaller screens */
+  
+}

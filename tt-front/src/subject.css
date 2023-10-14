@@ -1,0 +1,14 @@
+.subList{
+    display:flex;
+    justify-content: space-around;
+    background-color: #FDFDFD;
+    height:5vh;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.subName{
+    padding:10px;
+    border-radius: 5px;
+    background-color: #978a70;
+}
